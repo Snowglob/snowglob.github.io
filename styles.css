@@ -1,0 +1,183 @@
+/* idk how but this affects spacing */
+@font-face{font-family: "Inter";
+src: url("Inter.var.woff2")
+format("woff2")
+}
+
+::selection {
+background-color: rgba(80,73,69,0.8);
+color: rgb(251,241,199);}
+:root{
+	/* font sizes  from utopia https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12*/
+  --step--1: clamp(0.83rem, calc(0.78rem + 0.29vw), 1.00rem);
+  --step-0: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem);
+  --step-1: clamp(1.20rem, calc(1.07rem + 0.63vw), 1.56rem);
+  --step-2: clamp(1.44rem, calc(1.26rem + 0.89vw), 1.95rem);
+  --step-3: clamp(1.73rem, calc(1.48rem + 1.24vw), 2.44rem);
+  	  /* colors */
+--background-color: rgb(251,241,199);
+--text-color: rgba(60,56,54,0.9);
+--imp-text-color: rgb(60,56,54);
+--background2-color: rgb(235,219,178);
+--link-text-color: rgb(69,133,136);
+--link-text-underline-color: rgba(69,133,136,0.4);
+}
+@media (prefers-color-scheme: dark){
+:root{
+--background-color: rgb(40,40,40);
+--text-color: rgba(251,241,199,0.9);
+--imp-text-color: rgb(251,241,199);
+--background2-color: rgb(60, 56, 54);
+--link-text-color: rgba(131, 165, 152);
+--link-text-underline-color: rgba(131, 165, 152,0.4);
+}
+}
+/*------ Structure ------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  background: var(--background-color);
+  color: var(--text-color); 
+  font-family: "Inter", sans-serif;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1 0 auto;
+  padding: 4vh clamp(1rem, 5vw, 3rem) 1rem;
+  margin: 0 auto;
+  /* --max-width: 75ch; 
+	or you can change the font.
+   */
+  width: min(100%, 80ch);
+}
+header, footer {
+	background: var(--background2-color);
+}
+header {
+	display: flex;
+	justify-content: space-between;
+  padding: 0 clamp(5%, 5vw, 15vw);
+	align-items: center;
+	width: 100vw;
+}
+footer{
+    flex-shrink: 0;
+}
+/*------ Images & text ------*/
+h1,h2 { font-family: monospace; font-weight: normal; margin-bottom: 0.5em;color: var(--imp-text-color);}
+h1{ font-size: var(--step-2);}
+h2{
+	font-size: var(--step-1);
+}
+p, ul, img{
+	margin-bottom: 1em;
+}
+p, li {
+font: var(--step-0)/1.6 'Inter', sans-serif; 
+}
+li {
+	margin-bottom: 0.5em;
+}
+ul {
+	padding: 0 1em;
+}
+a{color: var(--link-text-color); text-decoration: underline var(--link-text-underline-color);} 
+a:visited {
+	text-decoration: none;
+}
+a:hover{text-decoration: underline var(--link-text-color);
+}
+small {
+	font-size: var(--step--1);
+}
+header a {
+	text-decoration: none;
+	padding: 0.5em;
+	display: inline-block;
+	font-family: monospace;
+	color: inherit;
+}
+header ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+header ul, header li {
+	margin: 0;
+}
+.nav-name {
+	font-size: 0.9rem;
+}
+.dark {color: var(--imp-text-color);}
+.footer-content{
+    display: flex;
+    margin: 1em 0;
+    flex-direction: column;
+    text-align: center;
+}
+img {
+	max-width: 100%;
+	opacity: 0.8;
+  	border-radius: 5%;
+  border-top: dashed 4px rgba(152, 151, 26, 1);
+  border-bottom: solid 2px rgba(69, 133, 136, 1);
+  border-right: solid 2px rgba(104, 157, 106, 1);
+  border-left: dashed 4px rgba(215, 153, 33, 1);
+}
+.gif:nth-of-type(1) {width:95%; height: 10vh;}
+.gif {
+	width: 32%;
+	border: none;
+	opacity: 0.9;
+}
+.large{
+	width: 100%;
+}
+.medium{
+	width: 50%;
+}
+@media screen and (min-width:35em){
+	.large{
+	margin: 1em;
+	width: 50%;
+	}
+
+	.medium{
+	margin: 1em;
+	width: 40%;
+	}
+	.right{
+	float: right;
+	}
+	}
+/* Stuff specific to certain pages */
+.card {
+	padding: 0.5em;
+}
+.blog-card {
+	border-top: 0.1rem solid var(--background2-color);
+}
+.blog-card a{
+	text-decoration: none;
+	color: inherit;
+}
+.card h1{
+	margin: 0.25em 0;
+}
+.card p{
+	margin: 0.25em 0;
+		}
+.contents-card {
+	border-block: 0.1rem solid var(--background2-color);
+}
+.contents-card h2 {
+	margin: 0.5em 0;
+}
+.contents-card ul, .contents-card li {
+	margin: 0;
+}
