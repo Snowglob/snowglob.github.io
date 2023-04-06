@@ -1,2 +1,2 @@
-# [My website](snowglob.github.io)
+# [My website](https://snowglob.github.io)
 The home of snowglob
