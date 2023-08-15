@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
 	<atom:link href="https://snowglob.github.io/rss.xml" rel="self" type="application/rss+xml" />
-	<title>Blog</title>
+	<title>Snowglob's blog</title>
 	<description>Welcome to the blog! I’ll write some stuff in here. Also, even though you can't comment on these posts, feel free to message me about them.</description>
 	<link>https://snowglob.github.io/Blog.html</link>
 	<item>
